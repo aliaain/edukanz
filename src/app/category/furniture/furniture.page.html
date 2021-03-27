@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>furniture {{totalPrice}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-md-4>
+        <ion-card>
+          <img img class="categoryBG" src="../assets/furniture1.jpg"/>
+          <ion-card-header>
+      
+            <ion-card-title class="customFont">Chinioti Furniture </ion-card-title>
+          </ion-card-header>
+          <ion-button expend="block" size="full" (click)= "calcCost('c')"
+            > Add To Cart </ion-button>
+          
+        </ion-card>
+      </ion-col>
+      <ion-col col-md-4>
+        <ion-card>
+          <img img class="categoryBG" src="../assets/furniture2.jpg"/>
+          <ion-card-header>
+      
+            <ion-card-title class="customFont">Imported Furniture </ion-card-title>
+          </ion-card-header>
+          <ion-button expend="block" size="full" (click)= "calcCost('i')"
+            > Add To Cart </ion-button>
+        </ion-card>
+      </ion-col>
+      <ion-col col-md-4>
+        <ion-card></ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

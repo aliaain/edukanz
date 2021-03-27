@@ -12,7 +12,9 @@ submit: number=null
     this.router.navigate(['/login'])
   }
 
-
+  redirectHome(){
+    this.router.navigate(['/home'])
+  }
 
   ngOnInit() {
   }

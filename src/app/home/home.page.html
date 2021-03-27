@@ -1,4 +1,97 @@
 <ion-header [translucent]="true">
-  <ion-item >  <img class="headerlogo" src="../assets/eDukaanz-sq.png"> </ion-item>
-</ion-header>
+  <ion-item >  <img class="headerlogo"  src="../assets/eDukaanz.png" width="55%">
+    <ion-icon name="cart" slot="end" (click)="redriectcart()" ></ion-icon> </ion-item>
 
+
+  <!-- <p class="customFont" color="secondary">Total items: {{ cart }}</p>
+  <p class="customFont" color="secondary">Cloths Item: {{count2}} </p>
+  <p class="customFont" color="secondary">footwear Item: {{count}} </p> -->
+
+  <p class="customFont" color="secondary">Your items: </p>
+  {{ itemsNcosts}}
+  <!-- <p class="customFont" color="secondary">In the Cart Service: </p>
+  {{ cartbill}} -->
+
+  <p class="customFont" color="secondary"> Total Amount:		5400 </p>
+
+  
+</ion-header>
+<ion-content>
+  
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-md-4>
+        <ion-card (click)="redriectcloths()">
+          
+    <img class="categoryBG" src="../assets/clothes.jpg" > 
+    <ion-card-header>
+      <ion-card-subtitle class="customFont">Gul Ahmed , Nishat Lane, many more </ion-card-subtitle>
+      <ion-card-title class="customFont">Clothes</ion-card-title>
+    </ion-card-header>
+    <ion-button expand="block" size="full" (click)="addClothes()" > View All </ion-button>
+
+        </ion-card>
+      </ion-col>
+      <ion-col col-md-4>
+        <ion-card (click)="redriectshoes()">
+          <img class="categoryBG" src="../assets/images.jpg" > 
+          <ion-card-header>
+            <ion-card-subtitle class="customFont">Branded footwear for Mens  </ion-card-subtitle>
+            <ion-card-title class="customFont">FootWear</ion-card-title>
+          </ion-card-header>
+          <ion-button expand="block" size="full" (click)= "addshoes()"
+            > View All </ion-button>
+      </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-md-4>
+        <ion-card (click)="redriectglasses()" > 
+          
+    <img class="categoryBG" src="../assets/glasses.jpg"  /> 
+    <ion-card-header>
+      <ion-card-subtitle class="customFont" >Branded Glasses for Mens/Womens  </ion-card-subtitle>
+      <ion-card-title class="customFont" >Sun Glasses</ion-card-title>
+    </ion-card-header>
+    <ion-button expand="block" size="full" (click)= "addshoes()"
+      > View All </ion-button>
+
+        </ion-card>
+      </ion-col>
+      <ion-col col-md-4>
+        <ion-card (click)="redriectfurniture()" >
+          
+    <img class="categoryBG" src="../assets/furniture.jpg"  /> 
+    <ion-card-header>
+      <ion-card-subtitle class="customFont" >Imported Furniture Around The World  </ion-card-subtitle>
+      <ion-card-title class="customFont" >Furniture</ion-card-title>
+    </ion-card-header>
+    <ion-button expand="block" size="full" (click)= "addshoes(600)"
+      > View All </ion-button>
+
+        </ion-card>
+      </ion-col>
+      <ion-col col-md-4>
+        <ion-card></ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-card (click)="redriectgrocery()" >
+    <img class="categoryBG" src="../assets/grocery.jpg"  /> 
+    <ion-card-header>
+      <ion-card-subtitle class="customFont" > Fresh Grocery Items h </ion-card-subtitle>
+      <ion-card-title class="customFont">Grocery </ion-card-title>
+    </ion-card-header>
+    <ion-button expand="block" size="full" (click)= "addshoes()"
+      > View All </ion-button>
+
+  </ion-card>
+
+
+</ion-content>

@@ -5,23 +5,72 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './cart.page.html',
   styleUrls: ['./cart.page.scss'],
 })
-export class CartPage implements OnInit {
+export class CartPage
+{
+/*
 
-myItem: number = 0
-bread: number =0
-egg: number=0
-  constructor() { }
-  breads(){
-this.bread= 50
-this.myItem=this.myItem+this.bread
-     
-  }
-  eggs(){
-    this.egg= 120
-    this.myItem=this.myItem+this.egg
+ cart: number = 0 // variable decaerlation assignment -- total amount
+ count: number = 0
+ count2:number = 0
+  constructor() {}
+
+
+  addition(){
+    if (this.cart >=0){
+      this.cart ++}
+    }
+  shoes(){
+
+    if(this.cart >=0){
+      this.cart ++
+    }
   }
 
-  ngOnInit() {
+  add2(){
+    if(this.count>=0){
+      this.count++
+    }
+
+
   }
+  add3(){
+    if(this.count2>=0){
+      this.count2 ++
+    }
+    
+
+  }
+  */
+
+  itemsNcosts: string = ""
+  total: number = 0 //value should add here
+  clothescounter: number = 0
+  shoescounter: number = 0
+
+  addClothes(){ //ZERO ARG Function
+    this.clothescounter++
+    //if(this.clothescounter == 0)
+    //this.itemsNcosts += "Clothes(" + this.clothescounter + ") = " + (this.clothescounter*1200) // string and number concatenation and price calculation within single line
+    //else 
+    this.cartstring(this.clothescounter, this.shoescounter) // FUNCTION CALL
+    
+  }
+  addshoes(){
+    this.shoescounter++
+    //this.itemsNcosts = "Shoes(" + this.shoescounter + ") = " + (this.shoescounter*500) // string and number concatenation and price calculation within single line
+    this.cartstring(this.clothescounter, this.shoescounter)
+  }
+  cartstring(c, s) // TWO ARG FUNCTION
+  {
+    if(c == 0 && s!=0)
+      this.itemsNcosts = "Shoes(" + this.shoescounter + ") = " + (this.shoescounter*500)
+
+      if(s == 0 && c!=0)
+      this.itemsNcosts = "Clothes(" + this.clothescounter + ") = " + (this.clothescounter*1200)
+
+        if (s!=0 && c!=0)
+        this.itemsNcosts = "Shoes(" + this.shoescounter + ") = " + (this.shoescounter*500) + " | Clothes(" + this.clothescounter + ") = " + (this.clothescounter*1200) 
+  }
+
 
 }
