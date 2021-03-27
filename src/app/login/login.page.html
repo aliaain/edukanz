@@ -1,0 +1,22 @@
+
+    <!-- <ion-img [src]="eDukaanz.png"></ion-img> -->
+    <img src="../assets/eDukaanz.png">
+    <ion-item class="customFont"  ><h1 class="mainHeading">LOGIN</h1> </ion-item>
+
+
+<ion-content>
+  <ion-item>
+    <ion-label class="customFont" color="secondary" position="floating">Email</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label class="customFont" color="secondary" position="floating">Password</ion-label>
+    <ion-input type="password" ></ion-input>
+  </ion-item>
+  <ion-button expend="block" size="full" (click)= "redriectHome()"> LogIn </ion-button>
+
+  <ion-item justify class="customFont"  > <p class="mainHeading" > Don't Have An Account</p> </ion-item>
+
+<ion-button expand="block" size="full" (click)="redirectSignup()" >  PLease Signup  </ion-button>
+
+</ion-content>

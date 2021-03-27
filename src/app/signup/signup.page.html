@@ -1,0 +1,34 @@
+
+<img src="../assets/eDukaanz.png">
+<ion-item class="center"> <h1 class="mainHeading">Sign up</h1></ion-item>
+
+
+<ion-content>
+
+  <ion-item>
+    <ion-label class="customFont" color="secondary" position="floating">Name</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="customFont" color="secondary" position="floating">Email</ion-label>
+    <ion-input></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="customFont" color="secondary" position="floating">Enter Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label class="customFont" color="secondary" position="floating">Confirm Password</ion-label>
+    <ion-input type="password"></ion-input>
+  </ion-item>
+
+  <br/><br/><br/>
+  <ion-button expand="block" (click)="Submit">Submit</ion-button>
+  <br/><br/><br/>
+  <ion-item justify class="customFont"  > <p  color="secondary" >Already have an account? </p> </ion-item>
+    <ion-button expand="block" size="medium"  fill="clear" (click)="Login()">Login Here</ion-button>
+  
+</ion-content>
